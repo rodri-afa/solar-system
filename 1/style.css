@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+}
+body#espacio{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('../img/stars.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+#sol{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+
+    background: rgb(255,251,100);
+    background: radial-gradient(circle, rgba(255,251,100,1) 0%, rgba(255,184,0,1) 100%);
+    
+    box-shadow: 0 0 10px rgba(255,184,0,1);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.orbita{
+    position: absolute;
+
+    animation-name: orbita;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.planeta{
+    border-radius: 50%;
+}
+
+@keyframes orbita {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#mercurio.orbita {
+    animation-duration: 2s;
+}
+#mercurio .planeta{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255,222,100);
+    /* background: rgb(255,222,100);
+    background: linear-gradient(90deg, rgba(255,222,100,1) 0%, rgba(249,182,11,1) 25%, rgba(254,133,2,1) 75%, rgba(255,111,0,1) 100%);  */
+    
+    transform: translateX(100px);
+}
+
+
+#venus.orbita {
+    animation-duration: 3s;
+}
+#venus .planeta{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(179, 208, 90);
+
+    transform: translateX(150px);
+}
+
+
+
+#tierra.orbita {
+    animation-duration: 6s;
+}
+#tierra .planeta{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(90, 208, 100);
+    
+    transform: translateX(200px);
+}
+
+
+
+
+
